@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Kodet av å følge "Funksjoner med parameter" videon</p>
+    <div id="mainDiv">innerHTML</div>
+    <button onclick="changeMainDiv1()">Test 1</button>
+    <button onclick="changeMainDiv2()">Test 2</button>
+    <button onclick="changeMainDivParameter('green','100','100')">Test 3</button>
+
+
+    <script>
+        function changeMainDiv1() {
+            document.getElementById('mainDiv').innerHTML = /*html*/ `
+            <div style="background-color:red; width:100%; height:100px"></div>
+            `
+        }
+        function changeMainDiv2() {
+            document.getElementById('mainDiv').innerHTML = /*html*/ `
+            <div style="background-color:blue; width:100%; height:100px"></div>
+            `
+        }
+
+        function changeMainDivParameter(color, width, height) {
+            document.getElementById('mainDiv').innerHTML = /*html*/ `
+            <div style="background-color: ${color}; width:${width}%; height:${height}px"></div>
+            `
+        }
+
+    </script>
+
+</body>
+
+</html>

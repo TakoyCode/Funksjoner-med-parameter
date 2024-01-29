@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="background">
+    <button onclick="changeColor()">Old change color to red</button>
+    <button onclick="changeColor('red')">New change color to red</button>
+    <button onclick="changeColor('blue')">New change color to blue</button>
+    <button onclick="changeColor('green')">New change color to green</button>
+
+
+    <script>
+        function changeColor() {
+            document.getElementById('background').style.background = 'red';
+        }
+
+        function changeColor(color) {
+            document.getElementById('background').style.background = color;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave-funksjon-med-parametere</title>
+    <style>
+        .bing {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="maindiv">tekst 1</div>
+
+    <button onclick="changetext1('dette er endret tekst for knapp 1','blue','white','500','200')">
+        Knapp 1</button>
+    <button onclick="changetext1('dette er endret tekst for knapp 2','green','red','200','500')">
+        Knapp 2</button>
+
+    <br />
+    <br />
+    <br />
+
+    <div id="bottomdiv">tekst 2</div>
+
+    <button onclick="changetext2('dette er endret tekst for knapp 3','blue','white','500','200')">Knapp 3</button>
+
+    <script>
+        //for å slippe å skrive getelementbyid veldig mange ganger
+        var getMaindivId = document.getElementById('maindiv');
+
+        //Prøvde å gjøre at changetext2 er lettere å lese / lettere å endre på
+        function changetext1(text, color, textcolor, width, height) {
+            getMaindivId.innerHTML = text;
+            getMaindivId.style.backgroundColor = color;
+            getMaindivId.style.color = textcolor;
+            getMaindivId.style.width = width + "px";
+            getMaindivId.style.height = height + "px";
+        }
+
+        //Gjør helt det samme som changetext1, men denne er skrivd ut
+        function changetext2(text, color, textcolor, width, height) {
+            document.getElementById('bottomdiv').innerHTML = /*html*/ `
+            <div style="background-color:${color}; color:${textcolor}; 
+            width:${width}px; height:${height}px;">
+            ${text}
+            </div>
+
+            `
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
