@@ -31,6 +31,7 @@
 
         //Prøvde å gjøre at changetext2 er lettere å lese / lettere å endre på
         function changetext1(text, color, textcolor, width, height) {
+            document.getElementById('maindiv').innerHTML = "";
             getMaindivId.innerHTML = text;
             getMaindivId.style.backgroundColor = color;
             getMaindivId.style.color = textcolor;
@@ -40,6 +41,8 @@
 
         //Gjør helt det samme som changetext1, men denne er skrivd ut
         function changetext2(text, color, textcolor, width, height) {
+            document.getElementById('maindiv').style = "";
+            document.getElementById('maindiv').innerHTML = "";
             document.getElementById('maindiv').innerHTML = /*html*/
                 `
 
